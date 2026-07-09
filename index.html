@@ -149,11 +149,11 @@
 
     /* ===== 通用 Section ===== */
     .section {
-      min-height: 100vh;
+      min-height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 28px;
+      padding: 100px 28px;
     }
 
     .section-inner {
@@ -237,6 +237,50 @@
       transform: scale(1.03);
     }
 
+    /* ===== 关于我们 ===== */
+    #about {
+      background: var(--bg);
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-text {
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: var(--gray);
+      line-height: 1.9;
+      text-align: left;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .stat-item .stat-number {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .stat-item .stat-label {
+      font-size: 14px;
+      color: var(--gray);
+      letter-spacing: 1px;
+    }
+
     /* ===== 服务 ===== */
     #services {
       background: var(--white);
@@ -313,6 +357,65 @@
       line-height: 1.7;
     }
 
+    /* ===== 愿景 ===== */
+    #vision {
+      background: linear-gradient(160deg, #1d1d1f 0%, #2d2d2f 100%);
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+    }
+
+    #vision .section-label {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    #vision .section-title {
+      color: #fff;
+    }
+
+    #vision .section-desc {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 10px;
+    }
+
+    .vision-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 40px 28px;
+      text-align: left;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .vision-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .vision-card .vision-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .vision-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .vision-card p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.7;
+    }
+
     /* ===== 团队 ===== */
     #team {
       background: var(--bg);
@@ -324,7 +427,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 32px;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
@@ -365,55 +468,136 @@
       font-weight: 500;
     }
 
-    /* ===== 联系方式 ===== */
-    #contact {
+    /* ===== 招贤纳士 ===== */
+    #careers {
       background: var(--white);
       flex-direction: column;
       text-align: center;
     }
 
-    .contact-info {
-      margin-bottom: 44px;
+    .careers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 10px;
     }
 
-    .contact-phone {
-      font-size: 28px;
-      font-weight: 700;
+    .career-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: left;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .career-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .career-card h3 {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .career-card .career-tag {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--accent);
+      background: rgba(0, 113, 227, 0.1);
+      padding: 2px 12px;
+      border-radius: 100px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .career-card p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .career-card .career-contact {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ===== 联系方式 ===== */
+    #contact {
+      background: var(--bg);
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      text-align: left;
+    }
+
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+
+    .contact-item .ci-icon {
+      font-size: 22px;
+      min-width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-item .ci-label {
+      font-size: 13px;
+      color: var(--gray);
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .contact-item .ci-value {
+      font-size: 15px;
       color: var(--dark);
-      letter-spacing: 2px;
-      margin-bottom: 8px;
+      font-weight: 500;
     }
 
-    .contact-phone a {
+    .contact-item .ci-value a {
       color: inherit;
       text-decoration: none;
     }
 
-    .contact-phone a:hover {
+    .contact-item .ci-value a:hover {
       color: var(--accent);
     }
 
-    .contact-hint {
-      font-size: 15px;
-      color: var(--gray);
-    }
-
     .contact-form {
-      max-width: 520px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .contact-form input,
     .contact-form textarea {
-      padding: 16px 20px;
+      padding: 14px 18px;
       border: 1px solid var(--light-gray);
       border-radius: 12px;
-      font-size: 15px;
+      font-size: 14px;
       font-family: inherit;
-      background: var(--bg);
+      background: var(--white);
       transition: border-color 0.2s, box-shadow 0.2s;
       outline: none;
       color: var(--dark);
@@ -427,14 +611,14 @@
 
     .contact-form textarea {
       resize: vertical;
-      min-height: 120px;
+      min-height: 100px;
     }
 
     .contact-form button {
-      padding: 16px 28px;
+      padding: 14px 24px;
       background: var(--accent);
       color: #fff;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
       border: none;
       border-radius: 50px;
@@ -476,6 +660,7 @@
     .fade-in-d4 { transition-delay: 0.35s; }
     .fade-in-d5 { transition-delay: 0.45s; }
     .fade-in-d6 { transition-delay: 0.55s; }
+    .fade-in-d7 { transition-delay: 0.65s; }
 
     /* ===== 响应式 ===== */
     @media (max-width: 768px) {
@@ -497,7 +682,7 @@
       }
 
       .nav-links.open {
-        max-height: 320px;
+        max-height: 420px;
       }
 
       .nav-links a {
@@ -520,6 +705,20 @@
       .team-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+      }
+
+      .vision-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
       }
 
       .section {
@@ -558,8 +757,11 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero">首页</a></li>
+        <li><a href="#about">关于</a></li>
         <li><a href="#services">服务</a></li>
+        <li><a href="#vision">愿景</a></li>
         <li><a href="#team">团队</a></li>
+        <li><a href="#careers">招贤</a></li>
         <li><a href="#contact">联系</a></li>
       </ul>
     </div>
@@ -570,7 +772,40 @@
     <div class="hero-content">
       <h1 class="hero-title">拦不住<br>文化传媒</h1>
       <p class="hero-subtitle">用创意打破边界，让每一帧都值得被记住</p>
-      <a href="#services" class="hero-btn">探索服务 →</a>
+      <a href="#about" class="hero-btn">了解我们 →</a>
+    </div>
+  </section>
+
+  <!-- ===== 关于我们 ===== -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="section-label fade-in">About</p>
+      <h2 class="section-title fade-in fade-in-d1">关于我们</h2>
+      <div class="about-content">
+        <div class="about-text fade-in fade-in-d2">
+          <p>拦不住文化传媒有限公司，成立于中国河北廊坊，是一家以创意为核心驱动力的综合性文化传媒机构。我们深耕宣传片制作、AI 产品开发与企业培训三大业务板块，致力于为政企单位与品牌客户提供从内容策划到技术落地的一站式解决方案。</p>
+          <p>我们相信，真正的好内容应当「拦不住」。无论是镜头前的每一帧画面，还是屏幕后的每一行代码，我们始终以极致的专业态度和敏锐的行业洞察，帮助客户在信息洪流中脱颖而出。团队汇聚了影视制作、人工智能、品牌营销与企业管理等多领域人才，以跨界融合的思维模式，持续输出有温度、有深度、有影响力的作品与产品。</p>
+          <p>成立至今，拦不住已服务数十家企事业单位及品牌客户，覆盖政府宣传、企业形象、产品推广、教育培训等多个领域，用扎实的交付能力赢得了市场的信任与口碑。</p>
+        </div>
+        <div class="about-stats fade-in fade-in-d3">
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">服务客户</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">作品案例</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">客户满意度</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3大</div>
+            <div class="stat-label">业务板块</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -595,6 +830,32 @@
           <div class="service-icon">📚</div>
           <h3>培训服务</h3>
           <p>新媒体运营、短视频制作、AI 工具应用培训。用体系化的课程，帮助个人与团队快速提升实战能力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 愿景 ===== -->
+  <section class="section" id="vision">
+    <div class="section-inner">
+      <p class="section-label fade-in">Vision</p>
+      <h2 class="section-title fade-in fade-in-d1">企业愿景</h2>
+      <p class="section-desc fade-in fade-in-d2">以创意与技术为双翼，让每一份作品都成为行业标杆</p>
+      <div class="vision-grid">
+        <div class="vision-card fade-in fade-in-d3">
+          <div class="vision-icon">🚀</div>
+          <h3>使命</h3>
+          <p>用创意与技术赋能每一个品牌，让传播不再设限——让好内容真正「拦不住」地抵达人心。</p>
+        </div>
+        <div class="vision-card fade-in fade-in-d4">
+          <div class="vision-icon">🎯</div>
+          <h3>愿景</h3>
+          <p>成为中国北方最具影响力的文化传媒创新品牌，以 AI + 影像的融合力量，重新定义内容生产的边界。</p>
+        </div>
+        <div class="vision-card fade-in fade-in-d5">
+          <div class="vision-icon">💡</div>
+          <h3>价值观</h3>
+          <p>创意至上 —— 不敷衍每一个想法。结果导向 —— 用作品说话。持续进化 —— 拥抱变化，永不止步。</p>
         </div>
       </div>
     </div>
@@ -637,6 +898,40 @@
           <h4>张子靖</h4>
           <p class="role">CTO</p>
         </div>
+        <div class="team-card fade-in fade-in-d6">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">芃</div>
+          <h4>祁芃志</h4>
+          <p class="role">技术顾问</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 招贤纳士 ===== -->
+  <section class="section" id="careers">
+    <div class="section-inner">
+      <p class="section-label fade-in">Careers</p>
+      <h2 class="section-title fade-in fade-in-d1">招贤纳士</h2>
+      <p class="section-desc fade-in fade-in-d2">如果你也相信好内容「拦不住」，欢迎加入我们</p>
+      <div class="careers-grid">
+        <div class="career-card fade-in fade-in-d3">
+          <h3>影视后期制作</h3>
+          <span class="career-tag">全职 · 廊坊</span>
+          <p>负责宣传片、短视频的剪辑、调色与特效包装。熟练使用 Premiere、After Effects 等工具，有独立成片能力。</p>
+          <div class="career-contact">📩 简历投递：hr@lanbuzhu.com</div>
+        </div>
+        <div class="career-card fade-in fade-in-d4">
+          <h3>AI 产品经理</h3>
+          <span class="career-tag">全职 · 廊坊</span>
+          <p>负责 AI 产品的需求分析、功能规划与项目推进。对 AIGC 领域有深入了解，有产品落地经验者优先。</p>
+          <div class="career-contact">📩 简历投递：hr@lanbuzhu.com</div>
+        </div>
+        <div class="career-card fade-in fade-in-d5">
+          <h3>品牌策划</h3>
+          <span class="career-tag">全职 · 廊坊</span>
+          <p>负责客户品牌策略与创意方案撰写。文字功底扎实，脑洞大，能独立完成从提案到执行的全流程策划。</p>
+          <div class="career-contact">📩 简历投递：hr@lanbuzhu.com</div>
+        </div>
       </div>
     </div>
   </section>
@@ -647,20 +942,37 @@
       <p class="section-label fade-in">Contact</p>
       <h2 class="section-title fade-in fade-in-d1">联系我们</h2>
       <p class="section-desc fade-in fade-in-d2">期待与您的合作</p>
-
-      <div class="contact-info fade-in fade-in-d3">
-        <p class="contact-phone">
-          <a href="tel:18831242183">📞 188-3124-2183</a>
-        </p>
-        <p class="contact-hint">工作日 9:00 – 18:00 · 欢迎来电咨询</p>
+      <div class="contact-grid fade-in fade-in-d2">
+        <div class="contact-info-block">
+          <div class="contact-item">
+            <div class="ci-icon">📞</div>
+            <div>
+              <div class="ci-label">电话</div>
+              <div class="ci-value"><a href="tel:18831242183">188-3124-2183</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <div class="ci-label">地址</div>
+              <div class="ci-value">中国河北省廊坊市广阳区<br>万庄镇采四小区广阳区群众艺术馆3楼</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">🕐</div>
+            <div>
+              <div class="ci-label">工作时间</div>
+              <div class="ci-value">工作日 9:00 – 18:00</div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="您的姓名" required>
+          <input type="tel" name="phone" placeholder="联系电话" required>
+          <textarea name="message" placeholder="留言内容……" required></textarea>
+          <button type="submit">发送消息</button>
+        </form>
       </div>
-
-      <form class="contact-form fade-in fade-in-d4" id="contactForm">
-        <input type="text" name="name" placeholder="您的姓名" required>
-        <input type="tel" name="phone" placeholder="联系电话" required>
-        <textarea name="message" placeholder="留言内容……" required></textarea>
-        <button type="submit">发送消息</button>
-      </form>
     </div>
   </section>
 
@@ -693,7 +1005,7 @@
       navLinks.classList.toggle('open');
     });
 
-    // 点击导航链接后关闭菜单
+    // Close the mobile menu when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -701,14 +1013,13 @@
       });
     });
 
-    // ===== Intersection Observer: 淡入动画 =====
+    // ===== Intersection Observer: fade-in animation =====
     const fadeElements = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // 只触发一次
           observer.unobserve(entry.target);
         }
       });
@@ -719,7 +1030,7 @@
 
     fadeElements.forEach(el => observer.observe(el));
 
-    // ===== 表单提交 =====
+    // ===== Form Submit =====
     const form = document.getElementById('contactForm');
 
     form.addEventListener('submit', function (e) {
@@ -739,7 +1050,6 @@
       console.log('提交时间:', new Date().toLocaleString('zh-CN'));
       console.log('=====================');
 
-      // 显示成功反馈
       const btn = form.querySelector('button');
       const originalText = btn.textContent;
       btn.textContent = '✅ 已发送';
